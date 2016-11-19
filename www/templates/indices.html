@@ -1,0 +1,51 @@
+<ion-view title="Índices da cidade" id="page2" style="background-color:#D2EAD0;">
+  <ion-content padding="true" class="manual-ios-statusbar-padding" scroll="true" >
+    <div ng-init="buscarIndices()">.</div>  
+    <div class="spacer" style="width: 300px; height: 21px;"></div>
+    
+    <ion-list id="Ndices-list9">
+      <ion-item class="item-icon-left" id="Ndices-list-item4" ui-sref="menu.indiceEducacao">
+        <i class="icon ion-edit"></i>Educação <span class="badge badge-assertive">{{educacao}}</span></ion-item>
+    </ion-list>
+    
+    <div class="spacer" style="width: 300px; height: 15px;"></div>
+    
+    <ion-list id="Ndices-list10">
+      <ion-item class="item-icon-left" id="Ndices-list-item5" ui-sref="menu.indiceSaude">
+        <i class="icon ion-medkit"></i>Saúde <span class="badge badge-assertive">{{saude}}</span></ion-item>
+    </ion-list>
+    
+    <div class="spacer" style="width: 300px; height: 15px;"></div>
+    
+    <ion-list id="Ndices-list11">
+      <ion-item class="item-icon-left" id="Ndices-list-item6" ui-sref="menu.indiceTransporte">
+        <i class="icon ion-android-bus"></i>Transporte <span class="badge badge-assertive">{{transporte}}</span></ion-item>
+    </ion-list>
+    
+    <div class="spacer" style="width: 300px; height: 15px;"></div>
+    
+    <ion-list id="Ndices-list12">
+      <ion-item class="item-icon-left" id="Ndices-list-item7" ui-sref="menu.indiceSeguranca">
+        <i class="icon ion-ios-videocam"></i>Segurança <span class="badge badge-assertive">{{seguranca}}</span></ion-item>
+    </ion-list>
+    
+    <div class="spacer" style="width: 300px; height: 15px;"></div>
+    
+    <ion-list id="Ndices-list13">
+      <ion-item class="item-icon-left" id="Ndices-list-item8" ui-sref="menu.indiceSaneamento">
+        <i class="icon ion-earth"></i>Saneamento básico <span class="badge badge-assertive">{{saneamento}}</span></ion-item>
+    </ion-list>
+    
+    <div class="spacer" style="width: 300px; height: 15px;"></div>
+    
+    <ion-list id="Ndices-list14">
+      <ion-item class="item-icon-left" id="Ndices-list-item9" ui-sref="menu.indiceConservacao">
+        <i class="icon ion-settings"></i>Conservação <span class="badge badge-assertive">{{conservacao}}</span></ion-item>
+    </ion-list>
+    
+    <div class="spacer" style="width: 300px; height: 15px;"></div>
+      
+    <a id="pgIndice-button1" class="button button-balanced  button-block ion-ios-undo">Voltar</a>
+  </ion-content>
+</ion-view>
+    

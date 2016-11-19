@@ -1,0 +1,28 @@
+<ion-view title="pgLogin" hide-nav-bar="true" hide-back-button="true" id="pgLogin" style="background-color:#D2EAD0;" ng-controller="loginCtrl">
+    <ion-content padding="true" class="manual-ios-statusbar-padding" scroll="false">
+        <div class="spacer" style="width: 300px; height: 78px;"></div>
+        
+        <form id="pgLogin-form1" class="list">
+            <div class="spacer" style="width: 300px; height: 13px;"></div>
+            <ion-list id="pgLogin-list1">
+                <label class="item item-input" id="pgLogin-input1" name="txtUsuario">
+                    <input type="text" placeholder="Usuário" ng-model="usuario.login" ng-required="true" style="text-transform: lowercase;" ng-trim="true">
+                </label>
+                <label class="item item-input" id="pgLogin-input2" name="txtSenha">
+                    <input type="password" placeholder="Senha" ng-model="usuario.senha" ng-required="true" ng-minlength="6" ng-maxlength="10">
+                </label>
+            </ion-list>
+            
+            <div id="pgCadastro-container1" class="creator-container">{{retorno}}</div>
+                        
+            <a id="pgLogin-button1" class="button button-assertive  button-block icon ion-log-in" ng-disabled="!usuario.login || !usuario.senha" ng-click="logar(usuario)">ENTRAR</a>
+            
+            <button id="pgLogin-button5" class="button button-positive  button-block icon-left ion-social-facebook">ACESSE COM O FACEBOOK </button>
+            
+            <div class="spacer" style="width: 300px; height: 12px;"></div>
+            
+            <a ui-sref="pgCadastro" id="btnCadastro" style="font-weight:600;font-size:18px;" class="button button-positive  button-block button-clear">Crie uma conta</a>
+            <a ui-sref="pgRecuperacao" id="pgLogin-button6" style="font-weight:600;font-size:16px;border-radius:30px 30px 30px 30px;" class="button button-positive  button-block button-clear">Esquece sua senha?</a>
+        </form>
+    </ion-content>
+</ion-view>

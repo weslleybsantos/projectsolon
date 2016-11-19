@@ -1,0 +1,50 @@
+<ion-view title="pgCadastro" hide-nav-bar="true" hide-back-button="true" nav-transition="none" id="pgCadastro" style="background-color:#D2EAD0;" ng-controller="cadastroCtrl">
+    <ion-content padding="true" class="manual-ios-statusbar-padding" scroll="true">
+        
+        <form id="pgCadastro-form2" class="list">
+            <ion-list id="pgCadastro-list2" padding="false">
+                <div class="spacer" style="width: 12px; height: 20px;"></div>
+                
+            <ng-form name="frmDados">
+                <!-- campo de nome-->
+                <label class="item item-input item-floating-label" id="pgCadastro-textarea3" name="lblNome">
+                    <span class="input-label">Nome:</span>
+                    <input type="text" placeholder="Insira seu nome e sobrenome" ng-model="novoUsuario.nome" ng-required="true" ng-required="true" autofocus/>
+                </label>
+                
+                <div class="spacer" style="width: 6px; height: 20px;"></div>
+                
+                 <!-- campo de usuário-->
+                <label class="item item-input item-floating-label" id="pgCadastro-textarea2" name="lblUsuario">
+                    <span class="input-label">Usuário:</span> 
+                    <input type="text" placeholder="Insira um nome de usuário para acesso" ng-model="novoUsuario.login" style="text-transform: lowercase;" ng-required="true" ng-trim="true" onkeyup="this.value=this.value.replace(/[' ']/g,'')"/><!-- filter texto em minusculo -->
+                </label>
+        
+                <div class="spacer" style="width: 6px; height: 20px;"></div>
+                
+                <!-- campo de senha-->
+                <label class="item item-input item-floating-label" id="pgCadastro-textarea3" name="lblSenha">
+                    <span class="input-label">Senha:</span>
+                    <input type="password" placeholder="Insira uma senha de acesso" ng-model="novoUsuario.senha" ng-required="true" ng-minlength="6" ng-maxlength="10">
+                    
+                </label>
+                
+                <div class="spacer" style="width: 6px; height: 20px;"></div>
+                
+                <!-- campo de email-->
+                <label class="item item-input item-floating-label" id="pgCadastro-textarea4" name="lblEmail">
+                    <span class="input-label">E-mail:</span>
+                    <input type="email" placeholder="Insira um endereço de e-mail válido" ng-model="novoUsuario.email" ng-required="true"/>
+                </label>
+            </ng-form>
+                
+                <div class="spacer" style="width: 12px; height: 20px;" ng-show="novoUsuario.senha.$invalid && !novoUsuario.senha.$pristine" >Coloque no mínimo 6 letras ou números</div>                
+            </ion-list>
+          
+            <div id="pgCadastro-container1" class="creator-container">{{retorno}}</div>
+                                    
+             <!-- botão utilizando as diretivas ng-model para validação e chamando função do controller através da diretiva ng-click-->
+            <button ng-disabled="!novoUsuario.nome || !novoUsuario.login || !novoUsuario.senha || !novoUsuario.email" id="btnCadastrar" class="button button-positive  button-block" ng-click="cadastrar(novoUsuario)">CADASTRAR</button>
+        </form>
+    </ion-content>
+</ion-view>
