@@ -9,8 +9,6 @@ angular.module('app.controllers', [])
             $scope.retorno = 'aguarde...';
             serviceLoginAPI.getAcesso(user).success(function(data, status){
                     if(status == 200){
-                        window.localStorage.setItem("token_user", data.token);
-                        window.localStorage.setItem("id", data._id);
                         delete $scope.usuario;    
                         $state.go('menu.pgHome');//redireciona para pagina inicial em caso de sucesso
                     }
@@ -57,14 +55,164 @@ angular.module('app.controllers', [])
         }
 }])
 
+.controller('q1Ctrl', ['$scope', '$stateParams', '$rootScope', function ($scope, $stateParams, $rootScope){
+        $rootScope.albiero = 0;
+        $rootScope.tete= 0;
+        $rootScope.nulo= 0;
+        $rootScope.proenca= 0;
+    
+        $scope.q1 = function (opcao){
+            switch(opcao){
+                case 1:
+                    $rootScope.proenca = 1;
+                    $rootScope.q1=1;
+                    break;
+                case 2:
+                    $rootScope.albiero = 1;
+                    $rootScope.tete=1;
+                    $rootScope.q1=2;                    
+                    break;
+            }
+        }        
+}])
+
+.controller('q2Ctrl', ['$scope', '$stateParams', '$rootScope', function ($scope, $stateParams, $rootScope){
+        $scope.q2 = function (opcao){
+            switch(opcao){
+                case 1:
+                    $rootScope.albiero = $rootScope.albiero + 1;
+                    $rootScope.q2=1; 
+                    break;
+                case 2:
+                    $rootScope.proenca = $rootScope.proenca + 1;
+                    $rootScope.q2=2; 
+                    break;
+                case 3:
+                    $rootScope.tete = $rootScope.tete + 1;
+                    $rootScope.q2=3; 
+                    break;
+                case 4:
+                    $rootScope.nulo = 1;
+                    $rootScope.q2=4; 
+                    break;
+            }
+        }
+}])
+
+.controller('q3Ctrl', ['$scope', '$stateParams', '$rootScope', function ($scope, $stateParams, $rootScope){
+        $scope.q3 = function (opcao){
+            switch(opcao){
+                case 1:
+                    $rootScope.tete = $rootScope.tete + 1;
+                    break;
+                case 2:
+                    $rootScope.proenca = $rootScope.proenca + 1;
+                    break;
+                case 3:
+                    $rootScope.albiero = $rootScope.albiero + 1;                    
+                    break;
+                case 4:
+                    $rootScope.nulo = $rootScope.nulo + 1;
+                    break;
+            }
+        }
+}])
+
+.controller('q4Ctrl', ['$scope', '$stateParams', '$rootScope', function ($scope, $stateParams, $rootScope){
+        $scope.q4 = function (opcao){
+            switch(opcao){
+                case 1:
+                    $rootScope.proenca = $rootScope.proenca + 1;
+                    break;
+                case 2:
+                    $rootScope.albiero = $rootScope.albiero + 1;break;
+                case 3:
+                    $rootScope.tete = $rootScope.tete + 1;                                        
+                    break;
+                case 4:
+                    $rootScope.nulo = $rootScope.nulo + 1;
+                    break;
+            }
+        }
+}])
+
+.controller('q5Ctrl', ['$scope', '$stateParams', '$rootScope', function ($scope, $stateParams, $rootScope){
+        $scope.q5 = function (opcao){
+            switch(opcao){
+                case 1:
+                    $rootScope.albiero = $rootScope.albiero + 1;
+                    break;
+                case 2:
+                    $rootScope.tete = $rootScope.tete + 1;
+                    break;
+                case 3:
+                    $rootScope.proenca = $rootScope.proenca + 1;
+                    break;
+                case 4:
+                    $rootScope.nulo = $rootScope.nulo + 1;
+                    break;
+            }
+        }
+}])
+
+.controller('q6Ctrl', ['$scope', '$stateParams', '$rootScope', function ($scope, $stateParams, $rootScope){
+        $scope.q6 = function (opcao){
+            switch(opcao){
+                case 1:
+                    $rootScope.albiero = $rootScope.albiero + 1;
+                    break;
+                case 2:
+                    $rootScope.proenca = $rootScope.proenca + 1;                    
+                    break;
+                case 3:
+                    $rootScope.tete = $rootScope.tete + 1;
+                    break;
+                case 4:
+                    $rootScope.nulo = $rootScope.nulo + 1;
+                    break;
+            }
+        }
+}])
+
+.controller('q7Ctrl', ['$scope', '$stateParams', '$rootScope', function ($scope, $stateParams, $rootScope){
+        $scope.q7 = function (opcao){
+            switch(opcao){
+                case 1:
+                    $rootScope.tete = $rootScope.tete + 1;
+                    break;
+                case 2:
+                    $rootScope.proenca = $rootScope.proenca + 1;                    
+                    break;
+                case 3:
+                    $rootScope.albiero = $rootScope.albiero + 1;
+                    break;
+                case 4:
+                    $rootScope.nulo = $rootScope.nulo + 1;
+                    break;
+            }
+            
+            $rootScope.albiero = (($rootScope.albiero*100)/7).toFixed(2) + '%';
+            $rootScope.proenca = (($rootScope.proenca*100)/7).toFixed(2) + '%';
+            $rootScope.tete = (($rootScope.tete*100)/7).toFixed(2) + '%';
+            $rootScope.nulo = (($rootScope.nulo*100)/6).toFixed(2) + '%';
+        }
+}])
+
+.controller('resultadosCtrl', ['$scope', '$stateParams', '$rootScope', function ($scope, $stateParams, $rootScope){
+        $scope.resultados = function (){
+                       
+        }
+        
+}])
+
+
 .controller('recuperacaoCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {
 
 }])
 
 .controller('insertIndicesCtrl', ['$scope', '$stateParams', 'serviceIndices', function ($scope, $stateParams, serviceIndices) {
      $scope.inserirIndice = function (t){             
-            //service de comunicação com a api para cadastrar 
-            
+            //service de comunicação com a api para cadastrar             
             $scope.retorno1 = t;
             serviceIndices.postIndice(t).success(function(data){
                 $scope.retorno = data;

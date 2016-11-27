@@ -1,0 +1,37 @@
+<ion-view title="" id="pgQuestion1" style="background-color:#D2EAD0;">
+    <ion-content padding="true" class="has-header">
+        <div class="item item-avatar">
+            <img src="img/icon/icon-health.png">
+            <h2>Saúde</h2>
+        </div>
+        
+        <div class="item item-body">
+            <p>
+                UPA é um tipo de unidade hospitalar de média complexidade implantado em várias cidades do Brasil, fazendo parte do  SUS.
+                As unidades têm o objetivo de diminuir as filas nos prontos-socorros dos hospitais, procurando evitar que problemas de saúde mais simples sejam encaminhados para as unidades hospitalares (Fonte: Wikipédia).<br><br>
+                A Unidade de Pronto Atendimento (UPA) de Capivari, rede que já teve a entrega adiada por duas vezes pela Prefeitura, está parada e não tem previsão para ser entregue. A obra, avaliada em R$ 1,5 milhão, teve início em 2010 e deveria ficar pronta em janeiro de 2014.
+                Considerando que:<br><br>
+                - Com 5 anos de obra a UPA de Capivari não tem previsão para ser entregue.<br>
+                - A conclusão do prédio já foi adiada por duas vezes (Fonte: G1).<br><br>
+                
+                Diante dessas informações você acredita que deve-se:<br><br>
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="1">Desistir da UPA</ion-radio>  
+                    </ion-list>
+                    <p>A UPA não deve ser inaugurada, pois a crise está afetando a prefeitura. Capivari, como outros 500 municípios brasileiros com cerca de 60 mil habitantes, não tem recursos financeiros e logística suficiente para atender às exigências de funcionamento impostas pelo Ministério da Saúde. Assim o prédio da UPA deve ser mudado para outras finalidades como o Centro de Convivência da Melhor Idade um espaço para as pessoas com mais de 60 anos que precisam de cuidados.
+                    <p/></fieldset><br>
+            
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="2">Finalizar e entregar a UPA</ion-radio>  
+                    </ion-list>
+                    <p>A UPA deve ser inaugurada assim como definiu o convênio inicial firmado entre o município e o governo federal para que possa atender a população de Capivari. Recursos devem ser buscados para finalizar essa questão assim como foi feito na cidade São Pedro (região de Piracicaba)</p></fieldset>           
+            </p>
+            <p></p>
+        </div>
+        <a ui-sref="menu.question2" id="pgHome-button1" class="button button-positive button-block icon icon-right" ng-disabled="!choice" ng-click="q1(choice)">Próxima pergunta</a>        
+    </ion-content>    
+</ion-view>
+
+

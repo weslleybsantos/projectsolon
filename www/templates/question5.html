@@ -1,0 +1,52 @@
+<ion-view title="" id="pgQuestion4" style="background-color:#D2EAD0;">
+    <ion-content padding="true" class="has-header">        
+            <div class="item item-avatar">
+                <img src="img/icon/icon-police.png"
+                <h2>Segurança pública</h2>
+            </div>
+            
+         <div class="item item-body">   
+            <p>                
+                O que o governo do novo prefeito deve fazer para melhorar a segurança pública? 
+                <br><br>                
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="1">Propostas 1</ion-radio>  
+                    </ion-list>
+                    <p>
+                       - Investir em prevenção de crime através de recursos tecnológicos<br>
+                       - Investir em vídeo monitoramento
+                    <br>
+                    <p/></fieldset><br>
+            
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="2">Propostas 2</ion-radio>  
+                    </ion-list>
+                    <p>
+                      - Criar um centro operacional integrado, com câmeras inteligentes nas entradas e saídas do município, integradas ao banco de dados da polícia de mais de 20 cidades da região.
+                    <br>
+                    </p></fieldset><br>
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="3">Propostas 3</ion-radio>  
+                    </ion-list>
+                    <p>
+                    - Contratar novos guardas municipais para ampliar as rondas nos bairros.<br>
+                    - Apresentar novo estatuto para o aprimoramento da atuação da Guarda Civil.<br>
+                    - Modernizar o sistema de monitoramento no município.
+                    <br>
+                    </p></fieldset><br>
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="4">Nenhuma das anteriores</ion-radio>  
+                    </ion-list>
+                    <p>
+                        - Se nenhuma das propostas agradou<br>
+                    </p></fieldset> 
+            </p>
+            <p></p>
+        </div>
+        <a ui-sref="menu.question6" id="pgHome-button2" class="button button-positive button-block icon icon-right" ng-disabled="!choice" ng-click="q5(choice)">Próxima pergunta</a>        
+    </ion-content>    
+</ion-view>

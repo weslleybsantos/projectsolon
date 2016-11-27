@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-project-lite/sample.zip",
       "projectGuid": "9b65fe24-8b7d-4921-811c-6ccbe5e6ab64",
-      "lastModifiedDate": 1476654855143,
+      "lastModifiedDate": 1479526572576,
       "creationDate": 1476294439487
     },
     "XDK-app-designer": "false",
@@ -108,8 +108,8 @@
           "android-signed": true
         },
         "isActive_": true,
-        "certificateId_": "",
-        "appName_": "novoTeste",
+        "certificateId_": "CcA272iSbEOB7Ej_fMUPfg2",
+        "appName_": "Sólon",
         "appID_": "xdk.intel.cordova.template.lite",
         "appAccess_": {
           "mode": "whitelist",

@@ -1,0 +1,57 @@
+<ion-view title="" id="pgQuestion4" style="background-color:#D2EAD0;">
+    <ion-content padding="true" class="has-header">        
+            <div class="item item-avatar">
+                <img src="img/icon/icon-book.png"
+                <h2>Educação</h2>
+            </div>
+            
+         <div class="item item-body">   
+            <p>                
+                Para você o prefeito no setor de educação deve? 
+                <br><br>                
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="1">Propostas 1</ion-radio>  
+                    </ion-list>
+                    <p>
+                        - Construir e reformar escolas<br>
+                        - Cobrir as quadras de cinco escolas<br> 
+                        - Aumentar o valor do cartão material escolar e ampliar o reembolso dos estudantes<br>
+                        - Aumentar o número de salas multifuncionais para melhor atendimento de alunos com deficiência<br> 
+                        - Valorizar todos os profissionais da educação
+                    <br>
+                    <p/></fieldset><br>
+            
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="2">Propostas 2</ion-radio>  
+                    </ion-list>
+                    <p>
+                      - Combater o número de estudantes que abondam a escola (evasão escolar)<br>
+                      - Promover a plena inclusão dos alunos com deficiência<br>
+                      - Implantar, aos poucos, a “Escola do Futuro”, conceito de ensino que considera novos formatos, inclusive o espaço físico da aula, a qualidade e a disposição das cadeiras etc. Com inovações e aproveitamento constante dos avanços tecnológicos, proporcionando um ensino atraente e proveitoso aos alunos e gratificante aos profissionais que atuam na área.
+                    <br>
+                    </p></fieldset><br>
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="3">Propostas 3</ion-radio>  
+                    </ion-list>
+                    <p>
+                    - Criar as escolas de tempo integral de Capivari que oferecerá cursos profissionalizantes e extracurriculares para os jovens da cidade.<br>
+                    - Reformar e ampliar as escolas existentes, adequando-as as suas necessidades.<br>
+                    - Atualizar e garantir o Plano de Carreira da Educação contemplando todos os profissionais que trabalham na Educação.
+                    <br>
+                    </p></fieldset><br>
+                    <fieldset>
+                    <ion-list>
+                        <ion-radio ng-model="choice" ng-value="4">Nenhuma das anteriores</ion-radio>  
+                    </ion-list>
+                    <p>
+                        - Se nenhuma das propostas agradou<br>
+                    </p></fieldset> 
+            </p>
+            <p></p>
+        </div>
+        <a ui-sref="menu.question5" id="pgHome-button2" class="button button-positive button-block icon icon-right" ng-disabled="!choice" ng-click="q4(choice)">Próxima pergunta</a>        
+    </ion-content>    
+</ion-view>
